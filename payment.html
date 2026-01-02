@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Cổng thanh toán | Văn Phòng TC&L</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body data-page="payment" class="bg-[#0a0a0a]">
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-5xl w-full bg-black border border-amber-600/30 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[600px]">
+      <div class="p-12 md:w-5/12 bg-gradient-to-br from-[#1a1a1a] to-black flex flex-col justify-between">
+        <div>
+          <div class="text-amber-500 font-black text-2xl mb-8 tracking-widest border border-amber-500/30 inline-block px-4 py-2 rounded-xl">VP TC&L</div>
+          <h2 class="text-4xl font-bold text-white mb-4">Cổng Thanh Toán <br>Điện Tử</h2>
+
+          <div class="space-y-6 mt-8">
+            <div class="bg-white/5 p-5 rounded-2xl border border-white/5">
+              <div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1">Mã Hồ Sơ</div>
+              <div id="pay-id" class="text-2xl font-mono text-amber-400 font-bold">---</div>
+            </div>
+            <div>
+              <div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1">Số Tiền Hồ Sơ</div>
+              <div id="pay-amount" class="font-bold text-white text-2xl font-mono">---</div>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="history.back()" class="mt-8 text-xs text-slate-500 hover:text-white">← Quay lại</button>
+      </div>
+
+      <div class="p-12 md:w-7/12 bg-white text-slate-900 relative flex flex-col justify-center">
+        <div id="pay-vip-badge" class="hidden absolute top-8 right-8 bg-gradient-to-r from-amber-400 to-yellow-500 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+          Priority Member
+        </div>
+
+        <div id="pay-locked" class="hidden h-full flex flex-col justify-center items-center text-center">
+          <h3 class="font-bold text-2xl text-slate-900">Chưa Được Cấp Quyền</h3>
+          <p class="text-sm text-slate-500 mt-2">Vui lòng chờ Admin mở cổng thanh toán.</p>
+        </div>
+
+        <div id="pay-content" class="hidden">
+          <h3 class="font-bold text-2xl mb-8 text-slate-900">Thông Tin Chuyển Khoản</h3>
+
+          <div class="space-y-5">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+              <p id="pay-bank-name" class="font-bold text-xl text-slate-900">VIETCOMBANK</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+              <p id="pay-bank-acc" class="font-mono text-3xl font-bold tracking-tight text-blue-700">0000000000</p>
+            </div>
+            <div class="p-6 bg-amber-50 rounded-2xl border border-amber-200">
+              <p id="pay-memo" class="font-bold text-amber-900 text-xl font-mono">---</p>
+            </div>
+          </div>
+
+          <button onclick="alert('Vui lòng thực hiện trên App Ngân hàng của bạn.')" class="w-full mt-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-xl hover:bg-slate-800 transition">
+            Xác Nhận Đã Chuyển Khoản
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+
+</body>
+</html>

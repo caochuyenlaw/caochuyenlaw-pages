@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Chi tiết tin | Văn Phòng TC&L</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body data-page="article" class="bg-[#020617]">
+  <div class="min-h-screen">
+    <div class="relative h-[380px] w-full">
+      <img id="detail-image" src="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/50 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full p-8">
+        <div class="max-w-4xl mx-auto">
+          <a href="news.html" class="mb-6 inline-flex items-center gap-2 text-slate-300">← Quay lại</a>
+          <h1 id="detail-title" class="text-3xl font-bold text-white mb-4">Title</h1>
+          <div class="flex items-center gap-4 text-sm text-slate-400">
+            <span id="detail-date">Date</span>
+            <span id="detail-author" class="text-amber-500 font-bold">Author</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 py-12">
+      <div id="detail-content" class="article-content text-lg text-slate-300"></div>
+    </div>
+  </div>
+<script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+
+</body>
+</html>
